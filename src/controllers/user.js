@@ -21,7 +21,6 @@ const createUser = async (req, res) => {
                 .status(400)
                 .send("This account has already been registered.");
         }
-
         const user = new User(req.body);
         await user.save();
         const token = await user.generateAuthToken();
@@ -32,7 +31,7 @@ const createUser = async (req, res) => {
 };
 
 const fetchCurrentUser = async (req, res) => {
-
+    res.send({ user: req.user });
 };
 
 module.exports = {
