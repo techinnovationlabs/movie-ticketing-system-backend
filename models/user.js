@@ -18,14 +18,12 @@ const UserSchema = new Schema({
   },
   name: String,
   phoneNumber: String,
-  gender: [
-    {
-      type: String,
-      required: true,
-      enum: ["MALE", "FEMALE"],
-      default: "MALE",
-    },
-  ],
+  gender: {
+    type: String,
+    required: true,
+    enum: ["MALE", "FEMALE", "OTHER"],
+    default: "MALE",
+  },
   role: [
     {
       type: String,
