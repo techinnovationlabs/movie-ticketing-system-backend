@@ -4,6 +4,7 @@ const http = require("http");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const Movies = require("./models/movie");
+const ShowTimings = require("./models/showtiming");
 
 // Congfiguration of dot env variables
 const dotenv = require("dotenv");
@@ -86,11 +87,40 @@ const uploadMoviesAndShowTimings = async () => {
         trailer: "https://www.youtube.com/watch?v=WcAFd8XOUIA",
       },
     ];
+    const showTimings = [
+      {
+        title: "Morning",
+        time: "9:00 AM",
+      },
+      {
+        title: "Matinee",
+        time: "12:00 PM",
+      },
+      {
+        title: "Matinee",
+        time: "1:00 PM",
+      },
+      {
+        title: "Evening",
+        time: "7:00 PM",
+      },
+      {
+        title: "Night",
+        time: "10:00 PM",
+      },
+    ];
     const checkMovies = await Movies.count();
+    const checkShowTimings = await ShowTimings.count();
     if (checkMovies === 0) {
       const uploadMovies = await Movies.insertMany(movies);
       if (uploadMovies.length) {
-        console.log("Static Data uploaded successfully!");
+        console.log("Static Data for Movies uploaded successfully!");
+      }
+    }
+    if (checkShowTimings === 0) {
+      const uploadTimings = await ShowTimings.insertMany(showTimings);
+      if (uploadTimings.length) {
+        console.log("Static Data for Show Timings uploaded successfully!");
       }
     }
   } catch (err) {

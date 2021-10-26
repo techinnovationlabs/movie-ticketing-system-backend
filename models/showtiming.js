@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 const ShowTimingSchema = new Schema({
-  title: string,
-  time: string,
+  title: String,
+  time: String,
   createdAt: { type: Date, default: Date.now },
   updatedAt: Date,
 });
