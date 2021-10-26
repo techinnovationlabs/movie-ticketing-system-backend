@@ -3,22 +3,22 @@ let Schema = mongoose.Schema;
 
 const MovieSchema = new Schema({
   title: {
-    type: string,
+    type: String,
     required: true,
   },
-  description: string,
+  description: String,
   avgRating: Number,
   totalReviews: Number,
   totalRatings: Number,
   trailer: {
-    type: string,
+    type: String,
     required: true,
   },
   poster: {
-    type: string,
+    type: String,
     required: true,
   },
-  summary: string,
+  summary: String,
   createdAt: { type: Date, default: Date.now },
   updatedAt: Date,
 });

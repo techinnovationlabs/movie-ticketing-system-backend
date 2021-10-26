@@ -24,14 +24,12 @@ const UserSchema = new Schema({
     enum: ["MALE", "FEMALE", "OTHER"],
     default: "MALE",
   },
-  role: [
-    {
-      type: String,
-      required: true,
-      enum: ["VISITOR", "OWNER"],
-      default: "VISITOR",
-    },
-  ],
+  role: {
+    type: String,
+    required: true,
+    enum: ["VISITOR", "OWNER"],
+    default: "VISITOR",
+  },
   createdAt: { type: Date, default: Date.now },
   updatedAt: Date,
   status: {
