@@ -9,8 +9,10 @@ app.use(cors());
 app.use(express.json());
 const userRoutes = require('./routers/user');
 const authRoutes = require('./routers/auth');
+const movieRoutes = require('./routers/movie');
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/movies", movieRoutes);
 
 app.listen(port, () => {
     console.log("server is up");

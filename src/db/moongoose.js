@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { putStaticData } = require('./static-data');
 
 mongoose.connect('mongodb://localhost:27017/movie-ticketing-system', {
     useNewUrlParser: true
@@ -6,7 +7,7 @@ mongoose.connect('mongodb://localhost:27017/movie-ticketing-system', {
 
 mongoose.connection.on("open", function (ref) {
     console.log("Connected to mongo server.");
-
+    putStaticData();
 });
 
 mongoose.connection.on("error", function (err) {

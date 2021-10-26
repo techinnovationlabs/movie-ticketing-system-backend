@@ -11,7 +11,7 @@ const movieSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    description: {
+    plot: {
         type: String,
         required: true,
         trim: true,
