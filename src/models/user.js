@@ -47,14 +47,14 @@ userSchema.pre('save', async function (next) {
 
 userSchema.methods.generateAuthToken = async function () {
     const user = this;
-    const token = jwt.sign({ _id: user._id.toString() }, process.env.JWT_SECRET_KEY);
+    const token = jwt.sign({ _id: user._id.toString() }, process.env.JWT_SECRET_KEY, { expiresIn: "7 days" });
     return token;
 };
 
 userSchema.statics.findByCredentials = async (email, password) => {
     const user = await User.findOne({ email });
     if (!user) {
-        throw new Error('Username not found');
+        throw new Error('Email not found');
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {

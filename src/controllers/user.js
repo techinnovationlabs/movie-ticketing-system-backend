@@ -31,7 +31,8 @@ const createUser = async (req, res) => {
 };
 
 const fetchCurrentUser = async (req, res) => {
-    res.send({ user: req.user });
+    const token = await req.user.generateAuthToken();
+    res.send({ user: req.user, token });
 };
 
 module.exports = {

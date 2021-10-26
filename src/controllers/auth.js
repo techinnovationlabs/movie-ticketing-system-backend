@@ -7,7 +7,7 @@ const login = async (req, res) => {
         res.send({ user, token });
     } catch (e) {
         res.status(500)
-            .send("An error occurred while login: " + e.message);
+            .send(e.message);
     }
 };
 
