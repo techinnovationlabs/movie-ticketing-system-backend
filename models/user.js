@@ -32,8 +32,8 @@ const UserSchema = new Schema({
       default: "VISITOR",
     },
   ],
-  _created_at: { type: Date, default: Date.now },
-  _updated_at: Date,
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: Date,
   status: {
     type: String,
     enum: ["Active", "De-activated"],
