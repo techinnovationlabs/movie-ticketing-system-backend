@@ -6,7 +6,7 @@ const fetchUsers = async (req, res) => {
         res.send(users);
     } catch (e) {
         res.status(500)
-            .send("An error occurred while deleting the activities: " + e.message);
+            .send("An error occurred while fetching the users: " + e.message);
     }
 };
 
