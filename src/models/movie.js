@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const movieSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
         required: true,
         trim: true
@@ -16,7 +16,7 @@ const movieSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
-    ThumbUrl: {
+    poster: {
         type: String,
         required: true
     }
