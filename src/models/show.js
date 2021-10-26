@@ -1,17 +1,5 @@
 const mongoose = require('mongoose');
-
-
-// const availableTickets = new Schema({
-//     code: {
-//         type: String,
-//         required: true,
-//         trim: true
-//     },
-//     availableSeats: [{
-//         type: String
-//     }]
-// });
-
+const { Schema } = mongoose;
 const showSchema = new mongoose.Schema({
     date: {
         type: Date
@@ -23,7 +11,7 @@ const showSchema = new mongoose.Schema({
     movie: { type: Schema.Types.ObjectId, ref: "Movie" },
     screen: { type: Schema.Types.ObjectId, ref: "Screen" },
     availability: [{
-        code: {
+        tierCode: {
             type: String,
             required: true,
             trim: true

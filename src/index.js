@@ -12,11 +12,13 @@ const authRoutes = require('./routers/auth');
 const movieRoutes = require('./routers/movie');
 const slotRoutes = require('./routers/showslots');
 const screenRoutes = require('./routers/screen');
+const showRoutes = require('./routers/show');
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/movies", movieRoutes);
 app.use("/api/v1/slots", slotRoutes);
 app.use("/api/v1/screens", screenRoutes);
+app.use("/api/v1/shows", showRoutes);
 
 app.listen(port, () => {
     console.log("server is up");
