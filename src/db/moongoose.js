@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { putStaticData } = require('./static-data');
 
-mongoose.connect('mongodb://localhost:27017/movie-ticketing-system', {
+mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true
 });
 
