@@ -14,7 +14,6 @@ const screenSchema = new mongoose.Schema({
         },
         code: {
             type: String,
-            unique: true
         },
         price: {
             type: Number,

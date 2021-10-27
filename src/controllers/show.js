@@ -3,7 +3,7 @@ const Screen = require("../models/screen");
 
 const fetchShows = async (req, res) => {
     try {
-        const shows = await Show.find();
+        const shows = await Show.find().populate("movie").populate("screen").populate("showTime");
         res.send(shows);
     } catch (e) {
         res.status(500)
