@@ -58,5 +58,4 @@ const getSeats = (row, seatsPerRow = 10) => {
 module.exports = {
     fetchShows,
     createShow,
-    fetchShowByMovieAndDate
 };
