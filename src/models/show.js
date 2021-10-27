@@ -11,6 +11,15 @@ const showSchema = new mongoose.Schema({
     movie: { type: Schema.Types.ObjectId, ref: "Movie" },
     screen: { type: Schema.Types.ObjectId, ref: "Screen" },
     availability: [{
+        name: {
+            type: String,
+            required: true,
+            trim: true
+        },
+        price: {
+            type: Number,
+            required: true
+        },
         tierCode: {
             type: String,
             required: true,
