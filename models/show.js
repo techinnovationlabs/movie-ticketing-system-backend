@@ -2,12 +2,12 @@ const mongoose = require("mongoose");
 let Schema = mongoose.Schema;
 
 const ShowSchema = new Schema({
-  name: string,
-  time: { type: Schema.Types.ObjectId, ref: "showtiming" },
-  movie: { type: Schema.Types.ObjectId, ref: "movie" },
-  screen: { type: Schema.Types.ObjectId, ref: "screen" },
+  name: String,
+  time: { type: Schema.Types.ObjectId, ref: "ShowTiming" },
+  movie: { type: Schema.Types.ObjectId, ref: "Movie" },
+  screen: { type: Schema.Types.ObjectId, ref: "Screen" },
+  seats: Object,
   availableSeats: Number,
-  bookedSeats: Number,
   createdAt: { type: Date, default: Date.now },
   updatedAt: Date,
 });

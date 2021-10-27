@@ -18,10 +18,12 @@ const authRoutes = require("./routes/auth");
 const movieRoutes = require("./routes/movie");
 const reviewRoutes = require("./routes/review");
 const screenRoutes = require("./routes/screen");
+const showRoutes = require("./routes/show");
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/movies", movieRoutes);
 app.use("/api/v1/review", reviewRoutes);
 app.use("/api/v1/screen", screenRoutes);
+app.use("/api/v1/show", showRoutes);
 
 // Static Data check and creation incase of not already did
 
