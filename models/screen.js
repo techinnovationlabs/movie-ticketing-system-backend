@@ -3,23 +3,22 @@ let Schema = mongoose.Schema;
 
 const ScreenSchema = new Schema({
   name: {
-    type: string,
+    type: String,
     required: true,
   },
-  shows: { type: Schema.Types.ObjectId, ref: "show" },
   category: [
     {
       name: {
-        type: string,
+        type: String,
         enum: ["NORMAL", "PREMIUM"],
         default: "NORMAL",
       },
-      seats: string,
       adultPrice: Number,
       childPrice: Number,
     },
   ],
-  capacity: Number,
+  size: String,
+  seats: Object,
   createdAt: { type: Date, default: Date.now },
   updatedAt: Date,
 });

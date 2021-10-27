@@ -17,9 +17,11 @@ const server = http.createServer(app);
 const authRoutes = require("./routes/auth");
 const movieRoutes = require("./routes/movie");
 const reviewRoutes = require("./routes/review");
+const screenRoutes = require("./routes/screen");
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/movies", movieRoutes);
 app.use("/api/v1/review", reviewRoutes);
+app.use("/api/v1/screen", screenRoutes);
 
 // Static Data check and creation incase of not already did
 
