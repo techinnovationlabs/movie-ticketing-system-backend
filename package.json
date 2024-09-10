@@ -1,31 +1,33 @@
 {
-	"name": "movie-ticketing-system-backend",
-	"version": "1.0.0",
-	"description": "Movie_Ticketing system Backend",
-	"main": "index.js",
-	"scripts": {
+  "name": "movie-ticketing-system",
+  "version": "1.0.0",
+  "description": "Movie ticketing system API",
+  "main": "index.js",
+  "scripts": {
 		"dev": "nodemon src/index.js",
 		"start": "node src/index.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/techinnovationlabs/movie-ticketing-system-backend.git"
-	},
-	"author": "Vignesh Nagendran",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/techinnovationlabs/movie-ticketing-system-backend/issues"
-	},
-	"homepage": "https://github.com/techinnovationlabs/movie-ticketing-system-backend#readme",
-	"dependencies": {
-		"bcryptjs": "^2.4.3",
-		"cors": "^2.8.5",
-		"dotenv": "^10.0.0",
-		"express": "^4.17.1",
-		"jsonwebtoken": "^8.5.1",
-		"mongoose": "^6.0.12",
-		"nodemon": "^2.0.14",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techinnovationlabs/movie-ticketing-system-backend.git"
+  },
+  "author": "Tech Innovation Labs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techinnovationlabs/movie-ticketing-system-backend/issues"
+  },
+  "homepage": "https://github.com/techinnovationlabs/movie-ticketing-system-backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14",
 		"validator": "^13.6.0"
-	}
+  }
 }
